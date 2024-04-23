@@ -1,17 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\ApiController; 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,3 +17,7 @@ Route::resource('photos', App\Http\Controllers\PhotoController::class);
 Route::resource('photoDetails', App\Http\Controllers\Photo_detailController::class);
 Route::resource('rols', App\Http\Controllers\RolController::class);
 Route::resource('users', App\Http\Controllers\UserController::class);
+Route::post('generateToken/{user}', [App\Http\Controllers\TokenController::class, 'generateToken'])->name('generateToken');
+Route::middleware('auth:sanctum')->get('/user', function(Request $request){
+    return $request->user();
+}); 

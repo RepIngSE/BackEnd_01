@@ -14,10 +14,16 @@
             @foreach($users as $user)
                 <tr>
                     <td>{{ $user->name }}</td>
-                    <td> <a href="../rols/{{ $user->role_id }} " class="btn btn-outline-dark">{{ $user->role->name }}</a></td>
+                    <td>
+                        <a href="../rols/{{ $user->role_id }}" class="btn btn-outline-dark"
+                           onmouseover="this.style.backgroundColor='#add8e6'; this.style.color='#000';"
+                           onmouseout="this.style.backgroundColor=''; this.style.color='';">
+                            {{ $user->role->name }}
+                        </a>
+                    </td>
                     <td>{{ $user->phone_number }}</td>
                     <td>{{ $user->email }}</td>
-                    <td  style="width: 120px">
+                    <td style="width: 120px">
                         {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'delete']) !!}
                         <div class='btn-group'>
                             <a href="{{ route('users.show', [$user->id]) }}"

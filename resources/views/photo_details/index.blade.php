@@ -8,15 +8,19 @@
                     <h1>Detalles de fotos</h1>
                 </div>
                 <div class="col-sm-5">
-                    <a class="btn btn-secondary float-right"
+                    <a class="btn btn-info float-right"
                        href="{{ route('photoDetails.create') }}">
                         Agregar
                     </a>
                 </div>
                 <div class="col-sm-1">
                     <a class="btn btn-outline-dark float-right"
-                       href="{{ route('home') }}">
-                        Inicio</a>
+                        href="{{ route('home') }}"
+                        style="border-color: #000;"
+                        onmouseover="this.style.backgroundColor='#add8e6'; this.style.color='#fff';"
+                        onmouseout="this.style.backgroundColor=''; this.style.color='';">
+                        Inicio
+                    </a>
                 </div>
             </div>
         </div>

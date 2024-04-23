@@ -6,20 +6,17 @@
 
 <!-- Photo Details Id Field -->
 <div class="form-group col-sm-6">
+    {!! Form::hidden('user_id', $photo->id?? Auth::user()->id, ['class'=>'form-control','required']) !!}   
     {!! Form::label('photo_details_id', 'Id de los detalles de la foto:') !!}
 
     <?php
-    $photodetailsOptions=[];
-    foreach ($photoDetails as  $photoDetail){
-        $photodetailsOptions[$photoDetail->id] = $photoDetail->description;
+    $photoDetailsOptions = []; 
+    foreach ($photodetail as  $photo_detail){
+        $photoDetailsOptions[$photo_detail->id] = $photo_detail->description;
     }
     ?>
 
-    {!! Form::select('photo_details_id', $photodetailsOptions, null, ['class' => 'form-control', 'required']) !!}
-
-
-    {!! Form::number('photo_details_id', null, ['class' => 'form-control', 'required']) !!}
-
+    {!! Form::select('photo_details_id', $photoDetailsOptions, null, ['class' => 'form-control', 'required']) !!}
 </div>
 
 <!-- Url Field -->

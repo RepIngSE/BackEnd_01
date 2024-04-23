@@ -24,6 +24,20 @@
     <p>{{ $user->email }}</p>
 </div>
 
+<!--token actual-->
+<div class="col-sm-12">
+    {!! Form::label('Token','Token:') !!}
+    <p>{{ $user->remember_token }}</p>
+
+<!--Solicitar token-->
+<div class = "col-sm-12">
+    <form method="post" action="{{ route('generateToken', $user) }}">
+        @csrf
+        @method('POST')
+        <button type="submit" class="btn btn-primary">Generar token</button>
+    </form>
+</div>
+
 <!-- Email Verified At Field -->
 <div class="col-sm-12">
     {!! Form::label('email_verified_at', 'Verificacion de correo electronico:') !!}

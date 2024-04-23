@@ -13,10 +13,15 @@
             @foreach($photos as $photo)
                 <tr>
                     <td>
-                        <a href="../users/{{ $photo->user_id}}" class="btn btn-outline-dark">{{ $photo->user->name }}</a>
+                        <a href="../users/{{ $photo->user_id}}" class="btn btn-outline-dark"
+                        onmouseover="this.style.backgroundColor='#add8e6'; this.style.color='#000';"
+                        onmouseout="this.style.backgroundColor=''; this.style.color='';">
+                        {{ $photo->user->name }}</a>
                     </td>
                     <td>
-                    <a href="../photoDetails/{{ $photo->photo_details_id}}" class="btn btn-outline-dark">Ver detalles de la foto</a>
+                    <a href="../photoDetails/{{ $photo->photo_details_id}}" class="btn btn-outline-dark"
+                        onmouseover="this.style.backgroundColor='#add8e6'; this.style.color='#000';"
+                        onmouseout="this.style.backgroundColor=''; this.style.color='';">Ver detalles de la foto</a>
                     </td>
                     <td>
                         <img src="{{asset($photo->url)}}" alt="" style="width: 20%">
