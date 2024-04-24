@@ -64,8 +64,6 @@
                 </div>
                 <!-- /.login-card-body -->
             </div>
-
         </div>
-        <!-- /.login-box -->
     </body>
 </x-laravel-ui-adminlte::adminlte-layout>
