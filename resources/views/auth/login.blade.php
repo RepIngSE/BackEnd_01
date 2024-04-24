@@ -1,16 +1,17 @@
 <x-laravel-ui-adminlte::adminlte-layout>
 
-    <body class="hold-transition login-page">
-        <div class="login-box">
+     <!-- Login  -->
+
+    <body class="hold-transition login-page" style="background-color: #EAEDED;">
+        <div class="login-box" style="background-color: #FFFFFF;">
             <div class="login-logo">
                 <a href="{{ url('/home') }}"><b>{{ config('app.name') }}</b></a>
             </div>
-            <!-- /.login-logo -->
 
             <!-- /.login-box-body -->
-            <div class="card">
-                <div class="card-body login-card-body">
-                    <p class="login-box-msg">Inicio de sesión del Backend </p>
+            <div class="card" style="background-color: #F5F5F5;">
+                <div class="card-body login-card-body" style="background-color: #FFFFFF;">
+                <p class="login-box-msg">Inicio de sesión</p>
 
                     <form method="post" action="{{ url('/login') }}">
                         @csrf
@@ -49,20 +50,17 @@
                             </div>
 
                             <div class="col-4">
-                                <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+                                <button type="submit" class="btn btn-info btn-block">Ingresar</button>
                             </div>
-
                         </div>
                     </form>
-
                     <p class="mb-1">
-                        <a href="{{ route('password.request') }}">Recuperar contraseña</a>
+                        <a href="{{ route('password.request') }}" class="text-info">Recuperar contraseña</a>
                     </p>
                     <p class="mb-0">
-                        <a href="{{ route('register') }}" class="text-center">Registrar nuevo miembro</a>
+                        <a href="{{ route('register') }}" class="text-center text-info">Registrar nuevo miembro</a>
                     </p>
                 </div>
-                <!-- /.login-card-body -->
             </div>
         </div>
     </body>

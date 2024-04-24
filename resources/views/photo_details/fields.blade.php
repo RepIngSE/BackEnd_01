@@ -1,3 +1,5 @@
+<!-- Ubicación elementos para crear detalles de la foto -->
+
 <!-- Gps Location Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('gps_location', 'Locación Gps:') !!}

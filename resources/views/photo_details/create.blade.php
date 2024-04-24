@@ -1,3 +1,6 @@
+
+<!-- Crear los detalles de la foto  -->
+
 @extends('layouts.app')
 
 @section('content')
@@ -30,8 +33,8 @@
             </div>
 
             <div class="card-footer">
-                {!! Form::submit('Guardar', ['class' => 'btn btn-success']) !!}
-                <a href="{{ route('photoDetails.index') }}" class="btn btn-default"> Cancelar </a>
+                {!! Form::submit('Guardar', ['class' => 'btn btn-info']) !!}
+                <a href="{{ route('photoDetails.index') }}" class="btn btn-secondary"> Cancelar </a>
             </div>
 
             {!! Form::close() !!}

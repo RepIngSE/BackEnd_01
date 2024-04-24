@@ -1,3 +1,5 @@
+<!-- Ubicación elementos para crear usuarios -->
+
 <!-- Name Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('name', 'Nombre:') !!}

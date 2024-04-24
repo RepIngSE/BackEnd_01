@@ -29,7 +29,7 @@ return new class extends Migration
             'name' => 'Sara Gabriela Cruz',
             'role_id' => 3, //asigna el ID del rol correspondiente 
             'phone_number' => '3206362195', 
-            'email' => 'sgcruz@ucompensar.edu.co', //Correo estandar
+            'email' => 'saragabrielacruz2603@gmail.com', //Correo estandar
             'password' => Hash::make('123456789'), //Contraseña estandar
             'created_at' => now(),
             'updated_at' =>now(),

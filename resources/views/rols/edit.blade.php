@@ -1,3 +1,5 @@
+<!-- Configurar roles (Guardarlos, eliminarlos o editarlos)  -->
+
 @extends('layouts.app')
 
 @section('content')

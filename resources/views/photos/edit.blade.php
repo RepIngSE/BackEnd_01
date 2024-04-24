@@ -1,3 +1,6 @@
+
+<!-- Configurar y guardar foto con campos determinados  -->
+
 @extends('layouts.app')
 
 @section('content')
@@ -28,8 +31,8 @@
             </div>
 
             <div class="card-footer">
-                {!! Form::submit('Guardar', ['class' => 'btn btn-success']) !!}
-                <a href="{{ route('photos.index') }}" class="btn btn-default"> Cancelar</a>
+                {!! Form::submit('Guardar', ['class' => 'btn btn-info']) !!}
+                <a href="{{ route('photos.index') }}" class="btn btn-secundary"> Cancelar</a>
             </div>
 
             {!! Form::close() !!}

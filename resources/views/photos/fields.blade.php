@@ -1,12 +1,11 @@
-<!-- User Id Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('user_id', 'Id propietario:') !!}
-    {!! Form::number('user_id', null, ['class' => 'form-control', 'required']) !!}
-</div>
+<!-- Ubicación elementos para crear la foto -->
 
+<!-- User Id Field -->
+<div class="form-group col-sm-0">
+    {!! Form::hidden('user_id', $photo->id?? Auth::user()->id, ['class'=>'form-control','required']) !!}   
+</div>
 <!-- Photo Details Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::hidden('user_id', $photo->id?? Auth::user()->id, ['class'=>'form-control','required']) !!}   
     {!! Form::label('photo_details_id', 'Id de los detalles de la foto:') !!}
 
     <?php
@@ -23,9 +22,8 @@
 <div class="form-group col-sm-6">
     {!! Form::hidden('url', $photo->url ?? 'indefinido', ['class' => 'form-control', 'maxlength' => 255]) !!}
     @if ($photo->url)
-        <img src="{{ assent($photo->url) }}" alt="" style="width: 20%;">
+        <img src="{{ assent($photo->url) }}" alt="" style="width: 40%;">
     @else
-        <p>No se ha cargado ninguna imagen</p>
     @endif
 
 </div>

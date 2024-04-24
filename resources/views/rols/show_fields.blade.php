@@ -1,3 +1,5 @@
+<!-- Configuración para ver lo que esta dentro de roles -->
+
 <!-- Name Field -->
 <div class="col-sm-12">
     {!! Form::label('name', 'Nombre:') !!}

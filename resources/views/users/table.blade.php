@@ -1,7 +1,9 @@
+<!-- Configuración general de la tabla de usuarios -->
+
 <div class="card-body p-0">
     <div class="table-responsive">
         <table class="table" id="users-table">
-            <thead>
+        <thead class="thead" style="background-color: #17a2b8; color: #ffffff;">
             <tr>
                 <th>Nombre</th>
                 <th>Rol</th>
@@ -23,16 +25,19 @@
                     </td>
                     <td>{{ $user->phone_number }}</td>
                     <td>{{ $user->email }}</td>
-                    <td style="width: 120px">
+                    <td style="width: 200px">
                         {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'delete']) !!}
                         <div class='btn-group'>
                             <a href="{{ route('users.show', [$user->id]) }}"
-                               class='btn btn-default btn-xs'>
-                                <i class="far fa-eye"></i>
+                                class='btn btn-sm btn-outline-info'
+                                style="color: #17a2b8;"
+                                onmouseover="this.style.color='#1B4F72';"
+                                onmouseout="this.style.color='#1B4F72';">
+                                <i class="far fa-eye"></i> Ver
                             </a>
                             <a href="{{ route('users.edit', [$user->id]) }}"
-                               class='btn btn-default btn-xs'>
-                                <i class="far fa-edit"></i>
+                                class='btn btn-sm btn-outline-secondary'>
+                               <i class="far fa-edit"></i> Editar
                             </a>
                             {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                         </div>

@@ -1,3 +1,5 @@
+<!-- Configuración general de detalles de fotos con GPS -->
+
 @extends('layouts.app')
 
 @section('content')
@@ -10,10 +12,10 @@
                     </h1>
                 </div>
                 <div class="col-sm-6">
-                    <a class="btn btn-default float-right"
+                    <a class="btn btn-info float-right"
                        href="{{ route('photoDetails.index') }}">
-                                                    Volver
-                                            </a>
+                        Volver
+                    </a>
                 </div>
             </div>
         </div>

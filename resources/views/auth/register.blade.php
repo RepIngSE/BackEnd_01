@@ -1,13 +1,15 @@
 <x-laravel-ui-adminlte::adminlte-layout>
 
-    <body class="hold-transition register-page">
-        <div class="register-box">
+    <!-- Register  -->
+
+    <body class="hold-transition register-page" style="background-color: #EAEDED;">
+        <div class="register-box" style="background-color: #FFFFFF;">
             <div class="register-logo">
                 <a href="{{ url('/home') }}"><b>{{ config('app.name') }}</b></a>
             </div>
 
-            <div class="card">
-                <div class="card-body register-card-body">
+            <div class="card" style="background-color: #F5F5F5;">
+                <div class="card-body register-card-body" style="background-color: #FFFFFF;">
                     <p class="login-box-msg">Registrar nuevo miembro</p>
 
                     <form method="post" action="{{ route('register') }}">
@@ -66,19 +68,19 @@
                                 <div class="icheck-primary">
                                     <input type="checkbox" id="agreeTerms" name="terms" value="agree">
                                     <label for="agreeTerms">
-                                        Aceptar <a href="#">terminos y condiciones</a>
+                                        Aceptar <a href="#" class="text-info" >terminos y condiciones</a>
                                     </label>
                                 </div>
                             </div>
                             <!-- /.col -->
                             <div class="col-4">
-                                <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+                                <button type="submit" class="btn btn-info btn-block">Registrar</button>
                             </div>
                             <!-- /.col -->
                         </div>
                     </form>
 
-                    <a href="{{ route('login') }}" class="text-center">Ya tengo un usuario creado</a>
+                    <a href="{{ route('login') }}" class="text-center text-info">Ya tengo un usuario creado</a>
                 </div>
                 <!-- /.form-box -->
             </div><!-- /.card -->

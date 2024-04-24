@@ -1,7 +1,10 @@
+
+<!-- Configuración general de la tabla de fotos -->
+
 <div class="card-body p-0">
     <div class="table-responsive">
         <table class="table" id="photos-table">
-            <thead>
+        <thead class="thead" style="background-color: #17a2b8; color: #ffffff;">
             <tr>
                 <th>Propietario</th>
                 <th>Detalles</th>
@@ -26,18 +29,21 @@
                     <td>
                         <img src="{{asset($photo->url)}}" alt="" style="width: 20%">
                     </td>
-                    <td  style="width: 120px">
+                    <td  style="width: 200px">
                         {!! Form::open(['route' => ['photos.destroy', $photo->id], 'method' => 'delete']) !!}
                         <div class='btn-group'>
                             <a href="{{ route('photos.show', [$photo->id]) }}"
-                               class='btn btn-default btn-xs'>
-                                <i class="far fa-eye"></i>
+                                class='btn btn-sm btn-outline-info'
+                                style="color: #17a2b8;"
+                                onmouseover="this.style.color='#1B4F72';"
+                                onmouseout="this.style.color='#1B4F72';">
+                                    <i class="far fa-eye"></i> Ver
                             </a>
                             <a href="{{ route('photos.edit', [$photo->id]) }}"
-                               class='btn btn-default btn-xs'>
-                                <i class="far fa-edit"></i>
+                                class='btn btn-sm btn-outline-secondary'>
+                               <i class="far fa-edit"></i> Editar
                             </a>
-                            {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                            {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-sm btn-outline-danger', 'onclick' => "return confirm('Are you sure?')"]) !!}
                         </div>
                         {!! Form::close() !!}
                     </td>

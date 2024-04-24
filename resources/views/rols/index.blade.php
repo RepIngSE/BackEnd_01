@@ -1,3 +1,5 @@
+<!-- Configuración botones generales de cada pantalla (Index) -->
+
 @extends('layouts.app')
 
 @section('content')
@@ -14,10 +16,10 @@
                     </a>
                 </div>
                 <div class="col-sm-1">
-                    <a class="btn btn-outline-dark float-right"
-                        href="{{ route('home') }}"
+                    <a href="{{ route('home') }}"
+                        class="btn btn-outline-dark float-right"
                         style="border-color: #000;"
-                        onmouseover="this.style.backgroundColor='#add8e6'; this.style.color='#fff';"
+                        onmouseover="this.style.backgroundColor='#add8e6'; this.style.color='#000';"
                         onmouseout="this.style.backgroundColor=''; this.style.color='';">
                         Inicio
                     </a>

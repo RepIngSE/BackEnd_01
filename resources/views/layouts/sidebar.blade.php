@@ -1,3 +1,6 @@
+
+<!-- Sidebar  -->
+
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="{{ route('home') }}" class="brand-link">
         <img src="https://ucompensar.edu.co/wp-content/uploads/2022/02/logo-ucompensar-2022.jpg"
