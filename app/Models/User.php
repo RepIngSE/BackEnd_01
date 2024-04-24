@@ -104,7 +104,7 @@ use Laravel\Sanctum\HasApiTokens;
         'name' => 'string',
         'phone_number' => 'string',
         'email' => 'string',
-        'email_verified_at' => 'datetime',
+        'email_verified_at' => 'string',
         'password' => 'string',
         'remember_token' => 'string'
     ];
