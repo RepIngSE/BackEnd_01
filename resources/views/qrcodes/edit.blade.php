@@ -1,3 +1,5 @@
+<!-- Configurar la edición de códigos QR  -->
+
 @extends('layouts.app')
 
 @section('content')
@@ -6,7 +8,7 @@
             <div class="row mb-2">
                 <div class="col-sm-12">
                     <h1>
-                        Edit Qrcode
+                        Editar los códigos QR
                     </h1>
                 </div>
             </div>
@@ -28,8 +30,8 @@
             </div>
 
             <div class="card-footer">
-                {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-                <a href="{{ route('qrcodes.index') }}" class="btn btn-default"> Cancel </a>
+                {!! Form::submit('Guardar', ['class' => 'btn btn-info']) !!}
+                <a href="{{ route('qrcodes.index') }}" class="btn btn-secondary"> Cancelar </a>
             </div>
 
             {!! Form::close() !!}

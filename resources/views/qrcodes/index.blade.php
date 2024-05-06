@@ -1,3 +1,5 @@
+<!-- Configuración botones generales de cada pantalla (Index) -->
+
 @extends('layouts.app')
 
 @section('content')
@@ -5,12 +7,21 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Qrcodes</h1>
+                    <h1> Códigos QR </h1>
                 </div>
-                <div class="col-sm-6">
-                    <a class="btn btn-primary float-right"
-                       href="{{ route('qrcodes.create') }}">
-                        Add New
+                <div class="col-sm-5">
+                    <a class="btn btn-info float-right"
+                       href="{{ route('photoDetails.create') }}">
+                        Agregar
+                    </a>
+                </div>
+                <div class="col-sm-1">
+                <a href="{{ route('home') }}"
+                    class="btn btn-outline-dark float-right"
+                    style="border-color: #000;"
+                    onmouseover="this.style.backgroundColor='#add8e6'; this.style.color='#000';"
+                    onmouseout="this.style.backgroundColor=''; this.style.color='';">
+                        Inicio
                     </a>
                 </div>
             </div>

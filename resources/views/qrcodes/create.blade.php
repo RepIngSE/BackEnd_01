@@ -1,3 +1,5 @@
+<!-- Crear los códigos QR -->
+
 @extends('layouts.app')
 
 @section('content')

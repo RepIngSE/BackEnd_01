@@ -6,14 +6,14 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>
-Qrcode Details
+                        Detales de los códigos QR
                     </h1>
                 </div>
                 <div class="col-sm-6">
-                    <a class="btn btn-default float-right"
+                    <a class="btn btn-info float-right"
                        href="{{ route('qrcodes.index') }}">
-                                                    Back
-                                            </a>
+                        Volver
+                    </a>
                 </div>
             </div>
         </div>

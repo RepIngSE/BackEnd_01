@@ -45,6 +45,24 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-6">
+            <div class="card mb-3">
+            <a href="{{ route('photoDetails.index') }}" class="btn btn-info">Códigos QR</a>
+                <img src="https://cdn.icon-icons.com/icons2/1521/PNG/512/qrcodehd_106111.png" class="card-img-top" alt="Img detalles de fotos">
+                <div class="card-body">
+                    <p class="card-text">En este fragmento podrás ver los QR generados de los diferentes productos de la página.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3">
+            <a href="{{ route('photoDetails.index') }}" class="btn btn-info">Transacciones</a>
+                <img src="https://cdn-icons-png.flaticon.com/512/2534/2534227.png" class="card-img-top" alt="Img detalles de fotos">
+                <div class="card-body">
+                    <p class="card-text">En este fragmento podrás ver las transacciones realizadas de las compras de determinados productos.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

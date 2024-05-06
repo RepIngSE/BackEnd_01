@@ -1,7 +1,7 @@
 <div class="card-body p-0">
     <div class="table-responsive">
-        <table class="table" id="qrcodes-table">
-            <thead>
+        <table class="table table-bordered table-hover" id="qrcodes-table">
+        <thead class="thead" style="background-color: #17a2b8; color: #ffffff;">
             <tr>
                 <th>User Id</th>
                 <th>Website</th>
@@ -31,14 +31,17 @@
                         {!! Form::open(['route' => ['qrcodes.destroy', $qrcode->id], 'method' => 'delete']) !!}
                         <div class='btn-group'>
                             <a href="{{ route('qrcodes.show', [$qrcode->id]) }}"
-                               class='btn btn-default btn-xs'>
-                                <i class="far fa-eye"></i>
+                                class='btn btn-sm btn-outline-info'
+                                style="color: #17a2b8;"
+                                onmouseover="this.style.color='#1B4F72';"
+                                onmouseout="this.style.color='#1B4F72';">
+                                    <i class="far fa-eye"></i> Ver
                             </a>
                             <a href="{{ route('qrcodes.edit', [$qrcode->id]) }}"
-                               class='btn btn-default btn-xs'>
-                                <i class="far fa-edit"></i>
+                               class='btn btn-sm btn-outline-secondary'>
+                                <i class="far fa-edit"></i> Editar
                             </a>
-                            {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                            {!! Form::button('<i class="far fa-trash-alt"></i> Eliminar', ['type' => 'submit', 'class' => 'btn btn-sm btn-outline-danger', 'onclick' => "return confirm('Are you sure?')"]) !!}
                         </div>
                         {!! Form::close() !!}
                     </td>

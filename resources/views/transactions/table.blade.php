@@ -1,7 +1,7 @@
 <div class="card-body p-0">
     <div class="table-responsive">
-        <table class="table" id="transactions-table">
-            <thead>
+        <table class="table table-bordered table-hover" id="transactions-table">
+        <thead class="thead" style="background-color: #17a2b8; color: #ffffff;">
             <tr>
                 <th>User Id</th>
                 <th>Qrcode Owner Id</th>
@@ -27,14 +27,17 @@
                         {!! Form::open(['route' => ['transactions.destroy', $transaction->id], 'method' => 'delete']) !!}
                         <div class='btn-group'>
                             <a href="{{ route('transactions.show', [$transaction->id]) }}"
-                               class='btn btn-default btn-xs'>
-                                <i class="far fa-eye"></i>
+                                class='btn btn-sm btn-outline-info'
+                                style="color: #17a2b8;"
+                                onmouseover="this.style.color='#1B4F72';"
+                                onmouseout="this.style.color='#1B4F72';">
+                                    <i class="far fa-eye"></i> Ver
                             </a>
                             <a href="{{ route('transactions.edit', [$transaction->id]) }}"
                                class='btn btn-default btn-xs'>
-                                <i class="far fa-edit"></i>
+                               <i class="far fa-edit"></i> Editar
                             </a>
-                            {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                            {!! Form::button('<i class="far fa-trash-alt"></i> Eliminar', ['type' => 'submit', 'class' => 'btn btn-sm btn-outline-danger', 'onclick' => "return confirm('Are you sure?')"]) !!}
                         </div>
                         {!! Form::close() !!}
                     </td>

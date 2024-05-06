@@ -5,12 +5,21 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Transactions</h1>
+                    <h1>Detalle de transacciones</h1>
                 </div>
-                <div class="col-sm-6">
-                    <a class="btn btn-primary float-right"
+                <div class="col-sm-5">
+                    <a class="btn btn-info float-right"
                        href="{{ route('transactions.create') }}">
-                        Add New
+                        Agregar
+                    </a>
+                </div>
+                <div class="col-sm-1">
+                <a href="{{ route('home') }}"
+                    class="btn btn-outline-dark float-right"
+                    style="border-color: #000;"
+                    onmouseover="this.style.backgroundColor='#add8e6'; this.style.color='#000';"
+                    onmouseout="this.style.backgroundColor=''; this.style.color='';">
+                        Inicio
                     </a>
                 </div>
             </div>

@@ -39,14 +39,14 @@
 
 <li class="nav-item">
     <a href="{{ route('qrcodes.index') }}" class="nav-link {{ Request::is('qrcodes*') ? 'active' : '' }}">
-        <i class="nav-icon fas fa-home"></i>
-        <p>Qrcodes</p>
+        <i class="nav-icon fas fa-qrcode"></i>
+        <p>Códigos QR</p>
     </a>
 </li>
 
 <li class="nav-item">
     <a href="{{ route('transactions.index') }}" class="nav-link {{ Request::is('transactions*') ? 'active' : '' }}">
-        <i class="nav-icon fas fa-home"></i>
-        <p>Transactions</p>
+        <i class="nav-icon fas fa-exchange-alt"></i>
+        <p>Transacciones</p>
     </a>
 </li>
