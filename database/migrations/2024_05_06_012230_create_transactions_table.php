@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id('id');
             $table->integer('user_id');
-            $table->integer('qrcode_owner_id')->nullable(); 
             $table->unsignedInteger('qrcode_id');
             $table->foreign('qrcode_id')->references('id')->on('qrcodes')->onDelete('cascade'); 
             $table->string('payment_method')->nullable(); 

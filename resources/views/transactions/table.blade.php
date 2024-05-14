@@ -4,7 +4,6 @@
         <thead class="thead" style="background-color: #17a2b8; color: #ffffff;">
             <tr>
                 <th>User Id</th>
-                <th>Qrcode Owner Id</th>
                 <th>Qrcode Id</th>
                 <th>Payment Method</th>
                 <th>Message</th>
@@ -17,7 +16,6 @@
             @foreach($transactions as $transaction)
                 <tr>
                     <td>{{ $transaction->user_id }}</td>
-                    <td>{{ $transaction->qrcode_owner_id }}</td>
                     <td>{{ $transaction->qrcode_id }}</td>
                     <td>{{ $transaction->payment_method }}</td>
                     <td>{{ $transaction->message }}</td>
@@ -34,7 +32,7 @@
                                     <i class="far fa-eye"></i> Ver
                             </a>
                             <a href="{{ route('transactions.edit', [$transaction->id]) }}"
-                               class='btn btn-default btn-xs'>
+                               class='btn btn-sm btn-outline-secondary'>
                                <i class="far fa-edit"></i> Editar
                             </a>
                             {!! Form::button('<i class="far fa-trash-alt"></i> Eliminar', ['type' => 'submit', 'class' => 'btn btn-sm btn-outline-danger', 'onclick' => "return confirm('Are you sure?')"]) !!}

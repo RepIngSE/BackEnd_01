@@ -4,12 +4,6 @@
     <p>{{ $transaction->user_id }}</p>
 </div>
 
-<!-- Qrcode Owner Id Field -->
-<div class="col-sm-12">
-    {!! Form::label('qrcode_owner_id', 'Qrcode Owner Id:') !!}
-    <p>{{ $transaction->qrcode_owner_id }}</p>
-</div>
-
 <!-- Qrcode Id Field -->
 <div class="col-sm-12">
     {!! Form::label('qrcode_id', 'Qrcode Id:') !!}

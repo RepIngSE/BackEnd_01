@@ -23,8 +23,7 @@ return new class extends Migration
             $table->float('amount',10, 4);
             $table->tinyInteger('status')->default(1)->nullable(); 
             $table->softDeletes(); 
-            $table->softDeletes(); 
-            
+            $table->timestamps();
         });
     }
 

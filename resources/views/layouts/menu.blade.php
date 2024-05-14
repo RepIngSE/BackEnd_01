@@ -35,8 +35,6 @@
         </a>
     </li>
 
-
-
 <li class="nav-item">
     <a href="{{ route('qrcodes.index') }}" class="nav-link {{ Request::is('qrcodes*') ? 'active' : '' }}">
         <i class="nav-icon fas fa-qrcode"></i>

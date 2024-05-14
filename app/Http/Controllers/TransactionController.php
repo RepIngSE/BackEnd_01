@@ -22,6 +22,7 @@ class TransactionController extends AppBaseController
     /**
      * Display a listing of the Transaction.
      */
+
     public function index(Request $request)
     {
         $transactions = $this->transactionRepository->paginate(10);

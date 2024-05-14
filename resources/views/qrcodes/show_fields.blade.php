@@ -75,6 +75,8 @@
             <form action="{{ route('payment') }}" method="post">
                 @csrf
                 <input type="hidden" name="amount" value="{{ $qrcode->amount }}">
+                <input type="hidden" name="user_id" value="{{ $qrcode->user_id }}">
+                <input type="hidden" name="qrcode_id" value="{{ $qrcode->id }}">
                 <button type="submit" class="btn btn-info btn-sm custom-btn">Paypal</button>
             </form>
         </div>

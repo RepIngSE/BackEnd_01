@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Payment;
 use Illuminate\Http\Request;
 use Omnipay\Omnipay; 
+use Illuminate\Support\Facades\DB; 
 
 class PaymentController extends Controller
 {
@@ -26,7 +27,7 @@ class PaymentController extends Controller
                 'returnUrl' => url('success'),
                 'cancelUrl' => url('error'),
             ))->send();
-
+            $this ->crearTransaccion($request -> user_id, $request -> qrcode_id, "Paypal", "Pago generado", $request -> amount, "Pagado"); 
             if ($response->isRedirect()) {
                 $response->redirect();
             }
@@ -36,6 +37,18 @@ class PaymentController extends Controller
         }catch (\Throwable $th){
             return $th->getMessage();
         }
+    }
+
+    public function crearTransaccion ($user_id, $qrcode_id, $payment_method, $message, $amount, $status){
+        // Sentencia de insersión de chat
+        DB::table('transactions')->insert([
+            'user_id'=>$user_id, 
+            'qrcode_id'=> $qrcode_id,
+            'payment_method'=> $payment_method,
+            'message' => $message,
+            'amount' => $amount,
+            'status' => $status
+        ]); 
     }
 
     public function success(Request $request)
@@ -61,7 +74,7 @@ class PaymentController extends Controller
                 $payment->currency = env('PAYPAL_CURRENCY');
                 $payment->payment_status = $arr['state'];
                 $payment->save(); 
-
+                
                 return redirect()->route('transactions.index')->with('success', 'Payment is Successful. Your Transaction Id is: ' . $arr['id']);
             }
             else {

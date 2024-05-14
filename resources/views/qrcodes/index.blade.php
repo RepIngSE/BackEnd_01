@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-sm-5">
                     <a class="btn btn-info float-right"
-                       href="{{ route('photoDetails.create') }}">
+                       href="{{ route('qrcodes.create') }}">
                         Agregar
                     </a>
                 </div>
